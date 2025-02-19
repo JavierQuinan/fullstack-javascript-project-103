@@ -1,7 +1,5 @@
 import { program } from "commander";
 import path from 'path';
-import { readFile } from '../src/fileReader.js';
-import { parseJson } from '../src/parser.js';
 import { compareFiles } from '../src/comparator.js';
 
 program

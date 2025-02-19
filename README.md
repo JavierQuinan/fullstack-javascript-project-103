@@ -10,3 +10,9 @@ Este programa compara dos archivos JSON y muestra las diferencias en un formato 
 ## 🚀 Estado del Proyecto
 
 [![CI](https://github.com/JavierQuinan/fullstack-javascript-project-103/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/JavierQuinan/fullstack-javascript-project-103/actions)
+
+## 📺 Ejemplo en acción
+
+Puedes ver `gendiff` en acción con archivos JSON y YAML aquí:
+
+[![Ver en asciinema](https://asciinema.org/a/JiG9ulhhpaOzkSO07TsbNtORW.svg)](https://asciinema.org/a/JiG9ulhhpaOzkSO07TsbNtORW)
