@@ -1,5 +1,6 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/JavierQuinan/fullstack-javascript-project-103/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/JavierQuinan/fullstack-javascript-project-103/actions)
+
 # Calculadora de Diferencias (gendiff)
 
 Este programa compara dos archivos JSON y muestra las diferencias en un formato claro.
