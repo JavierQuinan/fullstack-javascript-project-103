@@ -6,14 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bin":{
-    "gendiff": "bin/gendiff.js" 
+  "bin": {
+    "gendiff": "bin/gendiff.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "commander":"13.1.0"
+    "commander": "13.1.0",
+    "lodash": "^4.17.21"
   }
 }
