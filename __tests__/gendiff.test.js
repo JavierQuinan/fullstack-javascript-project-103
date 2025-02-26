@@ -1,40 +1,31 @@
+import { readFile } from '../src/fileReader.js';
 import { parseFile } from '../src/parser.js';
 import { compareFiles } from '../src/comparator.js';
+import { formatStylish } from '../src/formatters/stylish.js';
 import path from 'path';
-import { fileURLToPath } from 'url';
 
-// Configuración para rutas absolutas
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const getFixturePath = (filename) => path.join('__tests__/__fixtures__', filename);
 
-// Rutas de archivos de prueba
-const jsonFile1 = path.join(__dirname, '__fixtures__/file1.json');
-const jsonFile2 = path.join(__dirname, '__fixtures__/file2.json');
+const file1Json = getFixturePath('file1.json');
+const file2Json = getFixturePath('file2.json');
 
-const yamlFile1 = path.join(__dirname, '__fixtures__/file1.yml');
-const yamlFile2 = path.join(__dirname, '__fixtures__/file2.yml');
+const file1Yaml = getFixturePath('file1.yml');
+const file2Yaml = getFixturePath('file2.yml');
 
-// Resultado esperado
-const expectedDiff = `{
-  - follow: false
-    host: codica.io
-  - proxy: 123.234.53.22
-  - timeout: 50
-  + timeout: 20
-  + verbose: true
-}`;
+const expectedOutput = readFile(getFixturePath('expected_output.txt'));
 
 test('Comparación de archivos JSON', () => {
-  const data1 = parseFile(jsonFile1);
-  const data2 = parseFile(jsonFile2);
+  const data1 = parseFile(readFile(file1Json), file1Json);
+  const data2 = parseFile(readFile(file2Json), file2Json);
+  const result = formatStylish(compareFiles(data1, data2));
 
-  expect(compareFiles(data1, data2)).toBe(expectedDiff);
+  expect(result.trim()).toEqual(expectedOutput.trim());
 });
 
 test('Comparación de archivos YAML', () => {
-  const data1 = parseFile(yamlFile1);
-  const data2 = parseFile(yamlFile2);
+  const data1 = parseFile(readFile(file1Yaml), file1Yaml);
+  const data2 = parseFile(readFile(file2Yaml), file2Yaml);
+  const result = formatStylish(compareFiles(data1, data2));
 
-  expect(compareFiles(data1, data2)).toBe(expectedDiff);
+  expect(result.trim()).toEqual(expectedOutput.trim());
 });
-

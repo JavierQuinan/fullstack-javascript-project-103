@@ -17,3 +17,10 @@ Este programa compara dos archivos JSON y muestra las diferencias en un formato 
 Puedes ver `gendiff` en acción con archivos JSON y YAML aquí:
 
 [![Ver en asciinema](https://asciinema.org/a/JiG9ulhhpaOzkSO07TsbNtORW.svg)](https://asciinema.org/a/JiG9ulhhpaOzkSO07TsbNtORW)
+
+
+## 🎥 Demostración
+
+Puedes ver una grabación del funcionamiento de la herramienta en Asciinema:
+
+[![Ver en Asciinema](https://asciinema.org/a/tkK7hhYV73qeVjdQa9dmGooVh.svg)](https://asciinema.org/a/tkK7hhYV73qeVjdQa9dmGooVh)

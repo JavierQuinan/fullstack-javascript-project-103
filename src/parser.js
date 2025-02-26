@@ -1,25 +1,22 @@
-import fs from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';
 
 /**
- * Lee y analiza un archivo JSON o YAML.
- * @param {string} filepath - Ruta del archivo.
- * @returns {Object} - Datos analizados.
+ * Parsea el contenido de un archivo JSON o YAML
+ * @param {string} content - Contenido del archivo
+ * @param {string} filePath - Ruta del archivo (para identificar la extensión)
+ * @returns {object} - Objeto parseado
  */
-export const parseFile = (filepath) => {
-  const ext = path.extname(filepath); // Obtener la extensión del archivo
-  const data = fs.readFileSync(filepath, 'utf-8'); // Leer el archivo
+export const parseFile = (content, filePath) => {
+  const extension = path.extname(filePath);
 
-  switch (ext) {
-    case '.json':
-      return JSON.parse(data);
-    case '.yml':
-    case '.yaml':
-      return yaml.load(data);
-    default:
-      throw new Error(`Formato no soportado: ${ext}`);
+  if (extension === '.json') {
+    return JSON.parse(content);
   }
-};
+  if (extension === '.yml' || extension === '.yaml') {
+    return yaml.load(content);
+  }
 
+  throw new Error(`Unsupported file format: ${extension}`);
+};
   

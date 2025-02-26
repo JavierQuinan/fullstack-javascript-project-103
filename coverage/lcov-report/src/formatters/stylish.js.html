@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for comparator.js</title>
+    <title>Code coverage report for src/formatters/stylish.js</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="prettify.css" />
-    <link rel="stylesheet" href="base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(sort-arrow-sprite.png);
+            background-image: url(../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> comparator.js</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/formatters</a> stylish.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>12/12</span>
+                <span class='fraction'>23/23</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>10/10</span>
+                <span class='fraction'>14/14</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/2</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>12/12</span>
+                <span class='fraction'>22/22</span>
             </div>
         
             
@@ -91,26 +91,39 @@
 <a name='L26'></a><a href='#L26'>26</a>
 <a name='L27'></a><a href='#L27'>27</a>
 <a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">52x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">40x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-yes">36x</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">28x</span>
 <span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">22x</span>
-<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-yes">8x</span>
@@ -118,52 +131,63 @@
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import _ from 'lodash';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const INDENT_SIZE = 4;
+const HALF_INDENT = 2;
 &nbsp;
-/**
- * Compara dos archivos JSON/YAML y devuelve la estructura de diferencias.
- * @param {Object} data1 - Primer objeto.
- * @param {Object} data2 - Segundo objeto.
- * @returns {Array} - Diferencias estructuradas.
- */
-export const compareFiles = (data1, data2) =&gt; {
-  const keys = _.sortBy([...new Set([...Object.keys(data1), ...Object.keys(data2)])]); // Ordenar claves
+const makeIndent = (depth) =&gt; ' '.repeat(Math.max(0, depth * INDENT_SIZE - HALF_INDENT));
 &nbsp;
-  return keys.map((key) =&gt; {
-    if (!Object.hasOwn(data2, key)) {
-      return { key, type: 'removed', value: data1[key] };
-    }
-    if (!Object.hasOwn(data1, key)) {
-      return { key, type: 'added', value: data2[key] };
-    }
-    if (_.isObject(data1[key]) &amp;&amp; _.isObject(data2[key])) {
-      return { key, type: 'nested', children: compareFiles(data1[key], data2[key]) };
-    }
-    if (data1[key] !== data2[key]) {
-      return { key, type: 'updated', oldValue: data1[key], newValue: data2[key] };
-    }
-    return { key, type: 'unchanged', value: data1[key] };
-  });
+const formatValue = (value, depth) =&gt; {
+  if (typeof value === 'object' &amp;&amp; value !== null &amp;&amp; !Array.isArray(value)) {
+    const entries = Object.entries(value)
+      .map(([key, val]) =&gt; `${makeIndent(depth + 1)}  ${key}: ${formatValue(val, depth + 1)}`);
+    return `{\n${entries.join('\n')}\n${makeIndent(depth)}  }`;
+  }
+  return String(value);
 };
 &nbsp;
-  </pre></td></tr></table></pre>
+const formatStylish = (diff, depth = 1) =&gt; {
+  const indent = makeIndent(depth);
+  const lines = diff.map(({ key, type, value, oldValue, newValue, children }) =&gt; {
+    if (type === 'nested') {
+      return `${indent}  ${key}: {\n${formatStylish(children, depth + 1)}\n${indent}  }`;
+    }
+    if (type === 'added') {
+      return `${indent}+ ${key}: ${formatValue(value, depth)}`;
+    }
+    if (type === 'removed') {
+      return `${indent}- ${key}: ${formatValue(value, depth)}`;
+    }
+    if (type === 'updated') {
+      return `${indent}- ${key}: ${formatValue(oldValue, depth)}\n${indent}+ ${key}: ${formatValue(newValue, depth)}`;
+    }
+    return `${indent}  ${key}: ${formatValue(value, depth)}`;
+  });
+&nbsp;
+  return `{\n${lines.join('\n')}\n${makeIndent(depth - 1)}}`;
+};
+&nbsp;
+export { formatStylish };
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-02-26T02:19:42.839Z
+                at 2025-02-26T04:29:08.071Z
             </div>
-        <script src="prettify.js"></script>
+        <script src="../../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="sorter.js"></script>
-        <script src="block-navigation.js"></script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
     </body>
 </html>
     
