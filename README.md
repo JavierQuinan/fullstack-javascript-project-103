@@ -38,4 +38,7 @@ Puedes ver una demostración de `gendiff` en acción en el siguiente enlace:
 ![image](https://github.com/user-attachments/assets/1e55772c-3978-4852-8c6b-06cbbb4d2097)
 >>>>>>> 5ea7baeee552f44bef27470c9f05fcfdff126ce1
 
+## Ejemplo de uso en formato JSON
+
+[![asciicast](https://asciinema.org/a/5cDuAwF4pBK0HOOwEQGBBmGNR.svg)](https://asciinema.org/a/5cDuAwF4pBK0HOOwEQGBBmGNR)
 
