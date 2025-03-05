@@ -3,13 +3,13 @@ import path from 'path';
 import { readFile } from '../src/fileReader.js';
 import { parseFile } from '../src/parser.js';
 import { compareFiles } from '../src/comparator.js';
-import { formatDiff } from '../src/formatters/index.js'; // 📌 Ahora importa todos los formatos
+import { formatDiff } from '../src/formatters/index.js';
 
 program
   .name('gendiff')
   .description('Compares two configuration files and shows a difference.')
   .version('0.0.1')
-  .option('-f, --format <type>', 'output format (stylish, plain)', 'stylish') // 📌 Agrega opción de formato
+  .option('-f, --format <type>', 'output format', 'stylish')
   .argument('<filepath1>', 'The path of the first file')
   .argument('<filepath2>', 'The path of the second file')
   .action((filepath1, filepath2, options) => {
@@ -23,8 +23,7 @@ program
     const data2 = parseFile(content2, fullPath2);
 
     const diff = compareFiles(data1, data2);
-    
-    console.log(formatDiff(diff, options.format)); // 📌 Usa el formato seleccionado
+    console.log(formatDiff(diff, options.format));
   });
 
 program.parse();
