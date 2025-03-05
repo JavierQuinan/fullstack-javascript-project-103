@@ -26,10 +26,11 @@ export default function genDiff(path1, path2, formatType = 'stylish') {
 
   if (!firstFileData || !secondFileData) {
     console.error('Error reading one or both files. Please check the file paths and formats.');
-    return;
+    return null;
   }
 
   const diff = getDiff(firstFileData, secondFileData);
   const formattedDiff = format({ data: diff, formatType });
+  
   return formattedDiff;
 }

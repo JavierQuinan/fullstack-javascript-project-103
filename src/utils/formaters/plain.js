@@ -17,7 +17,7 @@ const nodeHandlers = {
   [CHANGED_VALUE]: ({ key, value1, value2 }, path) => {
     const propertyPath = buildPropertyPath(key, path);
     return `Property '${propertyPath}' was updated. From ${formatValue(value1)} to ${formatValue(value2)}`;
-  },
+  },s
   [DELETED_VALUE]: (node, path) => `Property '${buildPropertyPath(node.key, path)}' was removed`,
   [NESTED_VALUE]: ({ key, children }, path, traverse) => children.flatMap((child) => traverse(child, [...path, key])),
   [ROOT_VALUE]: ({ children }, path, traverse) => children.flatMap((child) => traverse(child, path)),
