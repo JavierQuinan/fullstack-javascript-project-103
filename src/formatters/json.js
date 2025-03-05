@@ -1,3 +1,4 @@
 const formatJson = (diff) => JSON.stringify(diff, null, 2);
 
-export { formatJson };
+export default formatJson;
+
