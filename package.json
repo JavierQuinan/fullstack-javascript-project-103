@@ -4,8 +4,8 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "test": "jest --coverage",
-    "lint": "eslint ."
+    "test": "jest" ,
+     "lint": "eslint ."
   },
   "bin": {
     "gendiff": "bin/gendiff.js"
