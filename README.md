@@ -24,3 +24,12 @@ Puedes ver `gendiff` en acción con archivos JSON y YAML aquí:
 Puedes ver una grabación del funcionamiento de la herramienta en Asciinema:
 
 [![Ver en Asciinema](https://asciinema.org/a/tkK7hhYV73qeVjdQa9dmGooVh.svg)](https://asciinema.org/a/tkK7hhYV73qeVjdQa9dmGooVh)
+
+
+## 🎥 Demostración en Asciinema
+
+Puedes ver una demostración de `gendiff` en acción en el siguiente enlace:
+
+[![asciicast](https://asciinema.org/a/i2cuEArSeYNdtKplUnxnKoaKd.svg)](https://asciinema.org/a/i2cuEArSeYNdtKplUnxnKoaKd)
+
+
