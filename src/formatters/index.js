@@ -15,5 +15,5 @@ const formatDiff = (diff, format) => {
   }
 };
 
-export { formatDiff };
+export default formatDiff;
 

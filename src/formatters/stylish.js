@@ -33,4 +33,4 @@ const formatStylish = (diff, depth = 1) => {
   return `{\n${lines.join('\n')}\n${makeIndent(depth - 1)}}`;
 };
 
-export { formatStylish };
+export default formatStylish;
