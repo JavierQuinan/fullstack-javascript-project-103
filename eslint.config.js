@@ -1,5 +1,5 @@
-import globals from "globals";
-import pluginJS from "@eslint/js";
+import globals from 'globals';
+import pluginJS from '@eslint/js';
 
 export default [
   {
