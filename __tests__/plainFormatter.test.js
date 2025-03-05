@@ -9,7 +9,7 @@ const getFixturePath = (filename) => path.join('__tests__/__fixtures__', filenam
 const file1Json = getFixturePath('file1.json');
 const file2Json = getFixturePath('file2.json');
 
-const expectedPlainOutput = readFile(getFixturePath('expected_plain_output.txt'));
+const expectedPlainOutput = readFile(getFixturePath('expected_output_plain.txt'));
 
 test('Comparación de archivos JSON en formato plain', () => {
   const data1 = parseFile(readFile(file1Json), file1Json);

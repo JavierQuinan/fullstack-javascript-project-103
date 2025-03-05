@@ -6,7 +6,6 @@ export const readFile = (filepath) => {
     const absolutePath = path.resolve(process.cwd(), filepath);
     return fs.readFileSync(absolutePath, 'utf-8');
   } catch (error) {
-    console.error(`Error al leer el archivo ${filepath}:`, error.message);
-    process.exit(1);
-  }
+    throw new Error(`Error al leer el archivo ${filepath}: ${error.message}`);
+  }  
 };

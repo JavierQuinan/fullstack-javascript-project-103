@@ -7,7 +7,7 @@ import { readFile } from '../src/fileReader.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const getFixturePath = (filename) => path.join(__dirname, '..', '__tests__', '__fixtures__', filename);
+const getFixturePath = (filename) => path.join('__tests__/__fixtures__', filename);
 
 const file1Json = getFixturePath('file1.json');
 const file2Json = getFixturePath('file2.json');
