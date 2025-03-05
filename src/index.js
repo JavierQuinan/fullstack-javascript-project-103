@@ -1,28 +1,36 @@
-import { readFile } from './fileReader.js';
-import { parseFile } from './parser.js';
-import { compareFiles } from './comparator.js';
-import formatStylish from './formatters/stylish.js';
-import formatPlain from './formatters/plain.js';
-import formatJson from './formatters/json.js';
+import fs from 'fs';
+import path from 'path';
+import getDiff from './utils/diff.js';
+import parseFile from './utils/parse.js';
+import format from './utils/formaters/index.js';
 
-const formatters = {
-  stylish: formatStylish,
-  plain: formatPlain,
-  json: formatJson,
+const getFullPath = (filepath) => path.resolve(process.cwd(), filepath);
+
+export const readFile = (fullFilePath) => {
+  try {
+    const extension = path.extname(fullFilePath).split('.')[1];
+    const data = parseFile(fs.readFileSync(fullFilePath, 'utf-8'), extension);
+    return data;
+  } catch (err) {
+    console.error(`Error reading file "${fullFilePath}":`, err.message);
+    return null;
+  }
 };
 
-export default function genDiff(filepath1, filepath2, format = 'stylish') {
-  const content1 = readFile(filepath1);
-  const content2 = readFile(filepath2);
+export default function genDiff(path1, path2, formatType = 'stylish') {
+  const firstFilePath = getFullPath(path1);
+  const secondFilePath = getFullPath(path2);
 
-  const data1 = parseFile(content1, filepath1);
-  const data2 = parseFile(content2, filepath2);
+  const firstFileData = readFile(firstFilePath);
+  const secondFileData = readFile(secondFilePath);
 
-  const diff = compareFiles(data1, data2);
-  
-  if (!formatters[format]) {
-    throw new Error(`Formato desconocido: ${format}`);
+  if (!firstFileData || !secondFileData) {
+    console.error('Error reading one or both files. Please check the file paths and formats.');
+    return;
   }
 
-  return formatters[format](diff);
+  const diff = getDiff(firstFileData, secondFileData);
+  const formattedDiff = format({ data: diff, formatType });
+  // eslint-disable-next-line consistent-return
+  return formattedDiff;
 }
