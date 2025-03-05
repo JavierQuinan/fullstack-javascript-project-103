@@ -31,6 +31,6 @@ export default function genDiff(path1, path2, formatType = 'stylish') {
 
   const diff = getDiff(firstFileData, secondFileData);
   const formattedDiff = format({ data: diff, formatType });
-  // eslint-disable-next-line consistent-return
+   
   return formattedDiff;
 }

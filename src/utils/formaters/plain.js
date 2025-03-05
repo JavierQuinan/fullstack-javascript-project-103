@@ -19,9 +19,9 @@ const nodeHandlers = {
     return `Property '${propertyPath}' was updated. From ${formatValue(value1)} to ${formatValue(value2)}`;
   },
   [DELETED_VALUE]: (node, path) => `Property '${buildPropertyPath(node.key, path)}' was removed`,
-  // eslint-disable-next-line max-len
+   
   [NESTED_VALUE]: ({ key, children }, path, traverse) => children.flatMap((child) => traverse(child, [...path, key])),
-  // eslint-disable-next-line max-len
+   
   [ROOT_VALUE]: ({ children }, path, traverse) => children.flatMap((child) => traverse(child, path)),
   [UNCHANGED_VALUE]: () => [],
 
