@@ -32,5 +32,5 @@ const formatValue = (value) => {
     return lines.join('\n');
   };
   
-  export { formatPlain };
+  export default formatPlain;
   
