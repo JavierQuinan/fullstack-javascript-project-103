@@ -1,19 +1,16 @@
-import { formatStylish } from './stylish.js';
-import { formatJson } from './json.js';
-import { formatPlain } from './plain.js';
+import formatStylish from './stylish.js';
+import formatPlain from './plain.js';
+import formatJson from './json.js';
 
-const formatDiff = (diff, format) => {
-  switch (format) {
-    case 'stylish':
-      return formatStylish(diff);
-    case 'plain':
-      return formatPlain(diff);
-    case 'json':
-      return formatJson(diff);
-    default:
-      throw new Error(`Unknown format: ${format}`);
-  }
+const formatters = {
+  stylish: formatStylish,
+  plain: formatPlain,
+  json: formatJson,
 };
 
-export default formatDiff;
-
+export default (diff, format = 'stylish') => {
+  if (!formatters[format]) {
+    throw new Error(`Formato desconocido: ${format}`);
+  }
+  return formatters[format](diff);
+};

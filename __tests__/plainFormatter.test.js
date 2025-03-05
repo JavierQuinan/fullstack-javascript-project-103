@@ -1,7 +1,7 @@
 import { readFile } from '../src/fileReader.js';
 import { parseFile } from '../src/parser.js';
 import { compareFiles } from '../src/comparator.js';
-import { formatPlain } from '../src/formatters/plain.js';
+import formatPlain from '../src/formatters/plain.js';
 import path from 'path';
 
 const getFixturePath = (filename) => path.join('__tests__/__fixtures__', filename);

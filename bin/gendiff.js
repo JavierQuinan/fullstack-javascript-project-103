@@ -3,7 +3,7 @@ import path from 'path';
 import { readFile } from '../src/fileReader.js';
 import { parseFile } from '../src/parser.js';
 import { compareFiles } from '../src/comparator.js';
-import { formatDiff } from '../src/formatters/index.js';
+import formatDiff from '../src/formatters/index.js';
 
 program
   .name('gendiff')

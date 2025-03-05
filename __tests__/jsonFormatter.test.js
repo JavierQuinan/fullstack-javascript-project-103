@@ -1,4 +1,4 @@
-import { formatJson } from '../src/formatters/json.js';
+import formatJson from '../src/formatters/json.js';
 import { compareFiles } from '../src/comparator.js';
 import { readFile } from '../src/fileReader.js';
 import { parseFile } from '../src/parser.js';
