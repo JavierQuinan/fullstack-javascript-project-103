@@ -1,5 +1,11 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/JavierQuinan/fullstack-javascript-project-103/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/JavierQuinan/fullstack-javascript-project-103/actions)
+git pull origin main
+
+## Badges
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/0f72551e0c2594460fde/maintainability)](https://codeclimate.com/github/JavierQuinan/fullstack-javascript-project-103/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/0f72551e0c2594460fde/test_coverage)](https://codeclimate.com/github/JavierQuinan/fullstack-javascript-project-103/test_coverage)
 
 # Calculadora de Diferencias (gendiff)
 
