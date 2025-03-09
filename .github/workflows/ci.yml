@@ -1,33 +1,37 @@
-name: CI Workflow
+name: test-check
 
 on:
   push:
     branches:
-      - main
-  pull_request:
-    branches:
-      - main
+      - "**"
+    tags:
+      - "**"
 
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v3  # Checkout del código
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: "20.11.0"
 
       - name: Install dependencies
-        run: npm install
+        run: npm install  # Instalar dependencias
 
-      - name: Run tests and generate coverage report
-        run: npx jest --coverage
+      - name: Run linter
+        run: npm run lint  # Ejecutar linter
 
-      - name: Upload coverage to Codecov
-        run: bash <(curl -s https://codecov.io/bash)
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      - name: Run tests
+        run: npm test  # Ejecutar pruebas
+
+      - name: Install CodeClimate test reporter
+        run: |
+          curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+          chmod +x ./cc-test-reporter  # Descargar e instalar el reporte de test de CodeClimate
+
+      - name: Report to CodeClimate
+        run: |
+          CC_TEST_REPORTER_ID=${{ secrets.CC_TEST_REPORTER_ID }} ./cc-test-reporter after-build --exit-code $?

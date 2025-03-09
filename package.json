@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "test": "jest --coverage --coverageReporters=lcov"
+    "test": "jest --coverage --coverageReporters lcov"
   },
   "author": "",
   "license": "ISC",
@@ -13,17 +13,12 @@
     "gendiff": "bin/gendiff.js"
   },
   "dependencies": {
-    "@eslint/js": "^9.21.0",
     "commander": "^12.1.0",
-    "globals": "^16.0.0",
+
     "js-yaml": "^4.1.0",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.9",
-    "@babel/plugin-transform-modules-commonjs": "^7.26.3",
-    "@babel/preset-env": "^7.26.9",
-    "babel-jest": "^29.7.0",
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.1",
