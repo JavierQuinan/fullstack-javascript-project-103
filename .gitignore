@@ -1,0 +1,12 @@
+node_modules/
+coverage/
+*.log
+.DS_Store
+
+# Terminal theme configuration files (local only)
+setup-terminal-theme.ps1
+apply-terminal-theme.ps1
+demo-screenshots.ps1
+terminal-theme-config.json
+terminal-profile-config.json
+*.backup-*
