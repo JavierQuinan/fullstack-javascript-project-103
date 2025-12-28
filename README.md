@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🔍 GenDiff - Generador de Diferencias
+# GenDiff - Generador de Diferencias
 
 ### Herramienta CLI profesional para comparar archivos de configuración
 
@@ -10,36 +10,36 @@
 ![Node.js Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen)
 ![License](https://img.shields.io/badge/license-ISC-blue)
 
-[Características](#-características) • [Instalación](#-instalación) • [Uso](#-uso) • [Tecnologías](#-tecnologías) • [Demos](#-demostraciones)
+[Características](#características) • [Instalación](#instalación) • [Uso](#uso) • [Tecnologías](#tecnologías) • [Demos](#demostraciones)
 
 </div>
 
 ---
 
-## 📋 Descripción
+## Descripción
 
 **GenDiff** es una potente herramienta de línea de comandos que compara dos archivos de configuración (JSON o YAML) y genera un reporte detallado de las diferencias encontradas. Soporta múltiples formatos de salida para adaptarse a diferentes necesidades de análisis.
 
-### ✨ Características
+### Características
 
-- ✅ Comparación de archivos **JSON** y **YAML**
-- ✅ Soporte para archivos anidados y complejos
-- ✅ Tres formatos de salida:
+- Comparación de archivos **JSON** y **YAML**
+- Soporte para archivos anidados y complejos
+- Tres formatos de salida:
   - **Stylish** - Formato visual jerárquico con indentación
   - **Plain** - Formato de texto plano legible
   - **JSON** - Formato estructurado para procesamiento programático
-- ✅ Detección precisa de:
+- Detección precisa de:
   - Propiedades añadidas
   - Propiedades eliminadas
   - Propiedades modificadas
   - Propiedades sin cambios
-- ✅ CLI intuitivo con Commander.js
-- ✅ Cobertura de pruebas con Jest
-- ✅ Code Quality con ESLint (Airbnb style guide)
+- CLI intuitivo con Commander.js
+- Cobertura de pruebas con Jest
+- Code Quality con ESLint (Airbnb style guide)
 
 ---
 
-## 🛠️ Tecnologías
+## Tecnologías
 
 <div align="center">
 
@@ -64,7 +64,7 @@
 
 </div>
 
-### 📦 Dependencias del Proyecto
+### Dependencias del Proyecto
 
 #### Producción
 ```json
@@ -88,7 +88,7 @@
 
 ---
 
-## 🎥 Demostraciones
+## Demostraciones
 
 ### Demo Completa - Archivos JSON y YAML
 [![Ver en asciinema](https://asciinema.org/a/JiG9ulhhpaOzkSO07TsbNtORW.svg)](https://asciinema.org/a/JiG9ulhhpaOzkSO07TsbNtORW)
@@ -104,7 +104,7 @@
 
 ---
 
-## 📥 Instalación
+## Instalación
 
 ### Requisitos Previos
 - **Node.js** >= 14.0.0
@@ -132,7 +132,7 @@ Ahora puedes usar el comando `gendiff` desde cualquier ubicación en tu terminal
 
 ---
 
-## 🚀 Uso
+## Uso
 
 ### Sintaxis Básica
 ```bash
@@ -225,7 +225,7 @@ gendiff database1.yaml database2.yaml
 
 ---
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 fullstack-javascript-project-103/
@@ -260,7 +260,7 @@ fullstack-javascript-project-103/
 
 ---
 
-## 🧪 Testing
+## Testing
 
 El proyecto incluye pruebas exhaustivas con **Jest** y cobertura de código.
 
@@ -289,7 +289,7 @@ make publish    # Publicar paquete (dry-run)
 
 ---
 
-## 🏗️ Arquitectura y Diseño
+## Arquitectura y Diseño
 
 ### Principios Aplicados
 - **Separación de Responsabilidades**: Cada módulo tiene una función específica
@@ -335,7 +335,7 @@ make publish    # Publicar paquete (dry-run)
 
 ---
 
-## 🤝 Contribuciones
+## Contribuciones
 
 Las contribuciones son bienvenidas. Por favor:
 
@@ -353,13 +353,13 @@ Las contribuciones son bienvenidas. Por favor:
 
 ---
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto está bajo la Licencia ISC.
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
 **Javier Quinan**
 
@@ -368,7 +368,7 @@ Este proyecto está bajo la Licencia ISC.
 
 ---
 
-## 🌟 Agradecimientos
+## Agradecimientos
 
 - [Hexlet](https://hexlet.io) - Plataforma educativa
 - [Commander.js](https://github.com/tj/commander.js) - CLI framework
@@ -380,9 +380,9 @@ Este proyecto está bajo la Licencia ISC.
 
 <div align="center">
 
-**⭐ Si este proyecto te fue útil, considera darle una estrella en GitHub ⭐**
+**Si este proyecto te fue útil, considera darle una estrella en GitHub**
 
-![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red)
+![Made with Love](https://img.shields.io/badge/Made%20with-Love-red)
 ![JavaScript](https://img.shields.io/badge/Made%20with-JavaScript-yellow)
 
 </div>
