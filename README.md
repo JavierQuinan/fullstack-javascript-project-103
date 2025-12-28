@@ -5,10 +5,11 @@
 ### Herramienta CLI profesional para comparar archivos de configuración
 
 [![Actions Status](https://github.com/JavierQuinan/fullstack-javascript-project-103/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/JavierQuinan/fullstack-javascript-project-103/actions)
-[![Maintainability](https://api.codeclimate.com/v1/badges/0f72551e0c2594460fde/maintainability)](https://codeclimate.com/github/JavierQuinan/fullstack-javascript-project-103/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/0f72551e0c2594460fde/test_coverage)](https://codeclimate.com/github/JavierQuinan/fullstack-javascript-project-103/test_coverage)
+[![Test CI](https://github.com/JavierQuinan/fullstack-javascript-project-103/actions/workflows/ci.yml/badge.svg)](https://github.com/JavierQuinan/fullstack-javascript-project-103/actions/workflows/ci.yml)
 ![Node.js Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen)
 ![License](https://img.shields.io/badge/license-ISC-blue)
+![Code Quality](https://img.shields.io/badge/code%20quality-ESLint-4B32C3)
+![Testing](https://img.shields.io/badge/testing-Jest-C21325)
 
 [Características](#características) • [Instalación](#instalación) • [Uso](#uso) • [Tecnologías](#tecnologías) • [Demos](#demostraciones)
 
