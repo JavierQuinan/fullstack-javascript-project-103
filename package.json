@@ -2,19 +2,30 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
+  "description": "CLI utility for comparing JSON and YAML configuration files with multiple output formats.",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
     "test": "jest --coverage --coverageReporters lcov"
   },
-  "author": "",
+  "author": "Francisco Quinteros",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JavierQuinan/fullstack-javascript-project-103.git"
+  },
+  "keywords": [
+    "cli",
+    "diff",
+    "json",
+    "yaml",
+    "nodejs"
+  ],
   "license": "ISC",
   "bin": {
     "gendiff": "bin/gendiff.js"
   },
   "dependencies": {
     "commander": "^12.1.0",
-
     "js-yaml": "^4.1.0",
     "lodash": "^4.17.21"
   },
